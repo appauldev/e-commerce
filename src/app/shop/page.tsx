@@ -1,18 +1,18 @@
-import ProductCard from "@/components/Cards/ProductCard";
-import { SortDropdown } from "@/components/DropdownMenus/SortDropdown";
-import SideBarMenu from "@/components/SidebarMenu";
-import { Button } from "@/components/ui/button";
-import { products } from "@/lib/data/dummy_products";
+import { SortDropdown } from '@/app/shop/components/DropdownMenus/SortDropdown';
+import SideBarMenu from '@/app/shop/components/SidebarMenu';
+import { Button } from '@/components/ui/button';
+import { categoriesAtom } from '@/app/shop/components/SidebarMenu/Checkboxes/CategoriesCheckbox';
+import ProductList from './components/ProductList';
 
 const commonly_searched_products = [
-  "Macbook M1 Air",
-  "AirPods 3",
-  "Macbook M2 Pro",
-  "iPhone 14",
-  "Mac Mini",
+  'Macbook M1 Air',
+  'AirPods 3',
+  'Macbook M2 Pro',
+  'iPhone 14',
+  'Mac Mini',
 ];
 
-const ProductList = () => {
+const ShopPage = () => {
   return (
     <>
       <div className="flex h-full flex-col ">
@@ -20,7 +20,7 @@ const ProductList = () => {
           {commonly_searched_products.map((product) => (
             <Button
               key={product}
-              variant={"ghost"}
+              variant={'ghost'}
               className="text-lg font-normal text-slate-600"
             >
               {product}
@@ -34,7 +34,8 @@ const ProductList = () => {
               <span className="text-base">Sort by: </span>
               <SortDropdown />
             </div>
-            <div className="grid h-full gap-6 px-8 pb-8 pt-4 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+            <ProductList />
+            {/* <div className="grid h-full gap-6 px-8 pb-8 pt-4 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
               {products.map((p) => (
                 <ProductCard
                   key={p.id}
@@ -48,7 +49,7 @@ const ProductList = () => {
                   img_url={p.img_url}
                 />
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -56,4 +57,4 @@ const ProductList = () => {
   );
 };
 
-export default ProductList;
+export default ShopPage;

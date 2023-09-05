@@ -1,8 +1,10 @@
-import { CategoriesCheckbox } from "../Checkboxes/CategoriesCheckbox";
-import { ConditionsCheckbox } from "../Checkboxes/ConditionsCheckbox";
-import { RatingsCheckbox } from "../Checkboxes/RatingsCheckbox";
-import PriceSlider from "../Sliders/PriceSlider";
-import { Separator } from "../ui/separator";
+'use client';
+
+import { CategoriesCheckbox } from './Checkboxes/CategoriesCheckbox';
+import { ConditionsCheckbox } from './Checkboxes/ConditionsCheckbox';
+import { RatingsCheckbox } from './Checkboxes/RatingsCheckbox';
+import PriceSlider from './Sliders/PriceSlider';
+import { Separator } from '../../../../components/ui/separator';
 
 const SideBarMenu = () => {
   return (
