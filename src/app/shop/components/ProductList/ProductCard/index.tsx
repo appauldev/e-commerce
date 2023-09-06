@@ -5,17 +5,17 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+} from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 
-import { IconStar } from "@tabler/icons-react";
-import Image from "next/image";
-import { ProductCardProps } from "@/lib/interfaces/props/ProductCardProps";
+import { IconStar } from '@tabler/icons-react';
+import Image from 'next/image';
+import { ProductCardProps } from '@/lib/interfaces/props/ProductCardProps';
 
 // format number to US dollar
-let PHPeso = new Intl.NumberFormat("en-US", {
-  style: "currency",
-  currency: "PHP",
+let PHPeso = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'PHP',
 });
 
 const ProductCard = (props: ProductCardProps) => {
@@ -40,7 +40,7 @@ const ProductCard = (props: ProductCardProps) => {
               {props.product_name}
             </CardDescription>
             <div className="flex">
-              <Badge variant={"secondary"}>{props.status}</Badge>
+              <Badge variant={'secondary'}>{props.condition}</Badge>
             </div>
           </div>
         </div>

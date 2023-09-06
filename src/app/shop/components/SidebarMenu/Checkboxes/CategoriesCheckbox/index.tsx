@@ -8,7 +8,7 @@ const categories = [
   { id: 'iphone', desc: 'iPhone' },
 ];
 
-export const categoriesAtom = atom(new Array<string>());
+export const categoriesAtom = atom<string[]>([]);
 
 export function CategoriesCheckbox() {
   const [selectedCategories, setSelectedCategories] = useAtom(categoriesAtom);

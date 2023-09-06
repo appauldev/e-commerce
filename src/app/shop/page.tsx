@@ -1,8 +1,9 @@
+'use client';
+
+import ProductList from './components/ProductList';
 import { SortDropdown } from '@/app/shop/components/DropdownMenus/SortDropdown';
 import SideBarMenu from '@/app/shop/components/SidebarMenu';
 import { Button } from '@/components/ui/button';
-import { categoriesAtom } from '@/app/shop/components/SidebarMenu/Checkboxes/CategoriesCheckbox';
-import ProductList from './components/ProductList';
 
 const commonly_searched_products = [
   'Macbook M1 Air',
